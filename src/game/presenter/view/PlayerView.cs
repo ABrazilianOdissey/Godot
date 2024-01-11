@@ -10,7 +10,7 @@ public interface PlayerView
 	void Stop();
 	float[] GetPosition();
 
-    public enum Input
+	public enum Input
 	{
 		NONE, RUN, UP, DOWN, LEFT, RIGHT
 	}

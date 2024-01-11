@@ -6,7 +6,7 @@ using service;
 public class MapPresenter
 {
 	private readonly CameraService cameraService;
-    private readonly Map map;
+	private readonly Map map;
 	private readonly MapView view;
 
     public MapPresenter(CameraService cameraService, Map map, MapView view)
@@ -24,7 +24,7 @@ public class MapPresenter
 
 	private void HandleResize()
     {
-        var size = this.view.GetSize();
+		var size = this.view.GetSize();
 		this.cameraService.SetLimits(size[0], size[1]);
     }
 
