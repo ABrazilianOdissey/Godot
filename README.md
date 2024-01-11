@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/ABrazilianOdissey/Godot/graph/badge.svg?token=O5FBH9HGRT)](https://codecov.io/gh/ABrazilianOdissey/Godot)
+
 # A Brazilian Odissey
 
 Game Design Document aqui...
