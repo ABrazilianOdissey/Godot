@@ -6,9 +6,9 @@ using presenter;
 public partial class GodotMapView : TileMap, MapView
 {
 	[Export]
-    public NodePath PlayerPath { get; set; }
+	public NodePath PlayerPath { get; set; }
 
-    public event Action OnResize;
+	public event Action OnResize;
 	private Vector2 currentWindowSize, baseResolution;
 
 	public override void _Ready()
@@ -21,11 +21,11 @@ public partial class GodotMapView : TileMap, MapView
 	public override void _Process(double delta)
 	{
 		var currentSize = GetViewport().GetVisibleRect().Size;
-        if (currentSize != this.currentWindowSize)
-        {
+		if (currentSize != this.currentWindowSize)
+		{
 			OnResize?.Invoke();
-            this.currentWindowSize = currentSize;
-        }
+			this.currentWindowSize = currentSize;
+		}
 	}
 
     public float[] GetSize()

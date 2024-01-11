@@ -4,14 +4,14 @@ using System;
 
 public partial class GodotPlayerView : CharacterBody2D, PlayerView
 {
-    public event Action<PlayerView.Input> OnInput;
+	public event Action<PlayerView.Input> OnInput;
 	private const float Speed = 200.0f;
 	private const float AnimationSpeed = 5f;
 	private AnimatedSprite2D animation;
 	private string currentDirection;
 	private Vector2 velocity;
 
-    public override void _Ready()
+	public override void _Ready()
 	{
 		this.animation = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		this.Turn(PlayerView.Direction.FRONT);
@@ -51,27 +51,27 @@ public partial class GodotPlayerView : CharacterBody2D, PlayerView
 	}
 
 	public void Run(PlayerView.Direction direction)
-    {
+	{
 		this.Turn(direction);
 		this.Move(true);
-        this.animation.Play(this.currentDirection + "_Run", AnimationSpeed * 2);
-    }
+		this.animation.Play(this.currentDirection + "_Run", AnimationSpeed * 2);
+	}
 
 	public void Walk(PlayerView.Direction direction)
-    {
+	{
 		this.Turn(direction);
 		this.Move(false);
-        this.animation.Play(this.currentDirection + "_Walk", AnimationSpeed);
-    }
+		this.animation.Play(this.currentDirection + "_Walk", AnimationSpeed);
+	}
 
 	public void Stop()
-    {
+	{
 		this.velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		this.velocity.Y = Mathf.MoveToward(Velocity.Y, 0, Speed);
 		Velocity = this.velocity;
 
-        this.animation.Play(this.currentDirection + "_Idle", AnimationSpeed);
-    }
+		this.animation.Play(this.currentDirection + "_Idle", AnimationSpeed);
+	}
 
 	public float[] GetPosition()
 	{
@@ -92,9 +92,9 @@ public partial class GodotPlayerView : CharacterBody2D, PlayerView
 		MoveAndSlide();
 	}
 
-    private void Turn(PlayerView.Direction direction)
-    {
-        this.currentDirection = char.ToUpper(direction.ToString()[0]) + direction.ToString().Substring(1).ToLower();
-    }
+	private void Turn(PlayerView.Direction direction)
+	{
+		this.currentDirection = char.ToUpper(direction.ToString()[0]) + direction.ToString().Substring(1).ToLower();
+	}
 
 }
