@@ -74,8 +74,7 @@ public class PlayerPresenter
 			this.view.Walk(viewDirection);
 		}
 		var position = this.view.GetPosition();
-        this.cameraService.UpdatePosition(position[0], position[1]);
+		this.cameraService.UpdatePosition(position[0], position[1]);
 	}
-
 
 }
