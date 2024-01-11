@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="UmaOdisseiaBrasileira"
-run/main_scene="res://scenes/Lisbon.tscn"
+run/main_scene="res://src/scenes/Lisbon.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://art/icon.svg"
+config/icon="res://src/art/icon.svg"
 
 [display]
 
