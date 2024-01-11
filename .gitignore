@@ -17,6 +17,8 @@ Thumbs.db
 **/bin/
 **/obj/
 *.user
-*.sln
-*.csproj
 *.vs/
+
+# Tests
+
+TestResults/
