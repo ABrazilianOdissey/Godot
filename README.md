@@ -45,7 +45,13 @@ public override void _Ready()
 }
 ```
 
-As classes Presenter, tanto MapPresenter quanto PlayerPresenter, servem para orquestrar as ações de Map e Player oriundas da View.
+Classes do tipo Manager serão associadas sempre ao Node root da Scene, nesse caso Lisbon:
+
+![Scene](./images/scene.png)
+
+Map e Player, os outros Nodes principais dessa Scene, terão, respectivamente, [GodotMapView](./src/game/view/GodotMapView.cs) e [GodotPlayerView](./src/game/view/GodotPlayerView.cs).
+
+As classes Presenter, tanto [MapPresenter](./src/game/presenter/MapPresenter.cs) quanto [PlayerPresenter](./src/game/presenter/PlayerPresenter.cs), servem para orquestrar as ações de Map e Player oriundas das suas View.
 
 ### Player
 
@@ -78,5 +84,3 @@ Responsável por orquestrar os Inputs da View e as mudanças de estado do Model,
 ## CameraService
 
 Como tanto a PlayerPresenter quanto a MapPresenter interagem com a câmera, CameraService serve para unificar ações em uma câmera. Player chama o método `UpdatePosition` de [GodotCameraService.cs](./src/game/service/GodotCameraService.cs), enquanto o Map chama o método `SetLimits` de [GodotCameraService.cs](./src/game/service/GodotCameraService.cs)
-
-## EN
