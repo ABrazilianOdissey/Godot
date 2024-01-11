@@ -1,0 +1,16 @@
+<RunSettings>
+  <DataCollectorSettings>
+    <DataCollector friendlyName="XPlat code coverage">
+      <Configuration>
+        <Include>
+          <Source>.*\\src\\game\\.*</Source>
+        </Include>
+        <Exclude>
+          <Source>.*\\src\\game\\manager\\.*</Source>
+          <Source>.*\\src\\game\\view\\.*</Source>
+          <Source>.*\\src\\game\\service\\.*</Source>
+        </Exclude>
+      </Configuration>
+    </DataCollector>
+  </DataCollectorSettings>
+</RunSettings>
