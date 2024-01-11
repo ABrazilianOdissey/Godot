@@ -53,7 +53,7 @@ Map e Player, os outros Nodes principais dessa Scene, terão, respectivamente, [
 
 As classes Presenter, tanto [MapPresenter](./src/game/presenter/MapPresenter.cs) quanto [PlayerPresenter](./src/game/presenter/PlayerPresenter.cs), servem para orquestrar as ações de Map e Player oriundas das suas View.
 
-### Player
+## Player
 
 ### [View](./src/game/view/GodotPlayerView.cs)
 
@@ -67,7 +67,7 @@ Responsável pelos atributos, estado e lógica de um Player.
 
 Responsável por orquestrar os Inputs da View e as mudanças de estado do Model, incluindo alterar a posição da câmera para posição atual do Player.
 
-### Map
+## Map
 
 ### [View](./src/game/view/GodotMapView.cs)
 
