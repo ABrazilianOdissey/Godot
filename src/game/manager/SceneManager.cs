@@ -11,7 +11,7 @@ public partial class SceneManager : Node
 	private MapView sceneView;
 	private CameraService cameraService;
 
-    public override void _Ready()
+	public override void _Ready()
 	{
 		var camera = GetNode<Camera2D>("Camera");
 		this.cameraService = new GodotCameraService(camera);
