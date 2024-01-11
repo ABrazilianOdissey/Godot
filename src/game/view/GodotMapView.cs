@@ -28,7 +28,7 @@ public partial class GodotMapView : TileMap, MapView
 		}
 	}
 
-    public float[] GetSize()
+	public float[] GetSize()
 	{
 		int minX = int.MaxValue;
 		int minY = int.MaxValue;
